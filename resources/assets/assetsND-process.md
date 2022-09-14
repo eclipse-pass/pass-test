@@ -7,7 +7,6 @@ Bring up the PASS Docker stack. Then, increase the search results window size to
  Now we can pull the assets down in a single query, and save it to a file `results.json` :
  
 `curl -X GET "localhost:9200/pass/_search?scroll=1m&size=45000&pretty" -H 'Content-Type: application/json' > results.json
-
 `
 
 Now, clean up the json by picking up the `_source` elements, removing the JournalName_suggest elements, and transforming all attribute names so they don't start with `@`:
